@@ -22,8 +22,12 @@ let activeClass = 'your-active-class';
 // function for apllying the activeClass
 
 function activation (){
+  // looping throw sections
   for (sec of sections){
+    // determine the current viewport section 
+    
     if (window.scrollY + window.innerHeight >= sec.offsetTop) { 
+      //check if it has an active class or not if it hasn't the function adds it to the section while it is on the current viewport. 
       if (!sec.classList.contains(activeClass))
         sec.classList.add(activeClass)
     } else {
